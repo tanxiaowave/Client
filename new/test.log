@@ -1,0 +1,167 @@
+2023-05-26 15:30:21 main.py[line:513] ERROR: ['.\\sqlexpress', 'sa', 'pos', 'rms_db']
+Traceback (most recent call last):
+  File "src\pymssql\_pymssql.pyx", line 647, in pymssql._pymssql.connect
+  File "src\pymssql\_mssql.pyx", line 2109, in pymssql._mssql.connect
+  File "src\pymssql\_mssql.pyx", line 701, in pymssql._mssql.MSSQLConnection.__init__
+  File "src\pymssql\_mssql.pyx", line 1818, in pymssql._mssql.maybe_raise_MSSQLDatabaseException
+  File "src\pymssql\_mssql.pyx", line 1835, in pymssql._mssql.raise_MSSQLDatabaseException
+pymssql._mssql.MSSQLDatabaseException: (20009, b'DB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (localhost)\nDB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (localhost)\n')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "main.py", line 509, in testSQL
+  File "src\pymssql\_pymssql.pyx", line 653, in pymssql._pymssql.connect
+pymssql._pymssql.OperationalError: (20009, b'DB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (localhost)\nDB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (localhost)\n')
+2023-05-26 15:31:02 main.py[line:513] ERROR: ['.\\sqlexpress', 'sa', 'pos', 'rms_db']
+Traceback (most recent call last):
+  File "src\pymssql\_pymssql.pyx", line 647, in pymssql._pymssql.connect
+  File "src\pymssql\_mssql.pyx", line 2109, in pymssql._mssql.connect
+  File "src\pymssql\_mssql.pyx", line 701, in pymssql._mssql.MSSQLConnection.__init__
+  File "src\pymssql\_mssql.pyx", line 1818, in pymssql._mssql.maybe_raise_MSSQLDatabaseException
+  File "src\pymssql\_mssql.pyx", line 1835, in pymssql._mssql.raise_MSSQLDatabaseException
+pymssql._mssql.MSSQLDatabaseException: (20009, b'DB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (localhost)\nDB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (localhost)\n')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "main.py", line 509, in testSQL
+  File "src\pymssql\_pymssql.pyx", line 653, in pymssql._pymssql.connect
+pymssql._pymssql.OperationalError: (20009, b'DB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (localhost)\nDB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (localhost)\n')
+2023-05-26 18:17:17 main.py[line:193] ERROR: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="__next"]/div[1]/div[1]/div/form/div[2]/label[1]/span/div/input"}
+  (Session info: headless chrome=109.0.5414.120)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x0153F243]
+	(No symbol) [0x014C7FD1]
+	(No symbol) [0x013BD04D]
+	(No symbol) [0x013EC0B0]
+	(No symbol) [0x013EC22B]
+	(No symbol) [0x0141E612]
+	(No symbol) [0x014085D4]
+	(No symbol) [0x0141C9EB]
+	(No symbol) [0x01408386]
+	(No symbol) [0x013E163C]
+	(No symbol) [0x013E269D]
+	GetHandleVerifier [0x017D9A22+2655074]
+	GetHandleVerifier [0x017CCA24+2601828]
+	GetHandleVerifier [0x015E8C0A+619850]
+	GetHandleVerifier [0x015E7830+614768]
+	(No symbol) [0x014D05FC]
+	(No symbol) [0x014D5968]
+	(No symbol) [0x014D5A55]
+	(No symbol) [0x014E051B]
+	BaseThreadInitThunk [0x7714EF3C+18]
+	RtlInitializeExceptionChain [0x7783360C+239]
+	RtlInitializeExceptionChain [0x778335DF+194]
+Traceback (most recent call last):
+  File "main.py", line 168, in loop
+  File "deliveroo.py", line 77, in deliverooScrape
+  File "selenium\webdriver\remote\webdriver.py", line 831, in find_element
+  File "selenium\webdriver\remote\webdriver.py", line 440, in execute
+  File "selenium\webdriver\remote\errorhandler.py", line 245, in check_response
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="__next"]/div[1]/div[1]/div/form/div[2]/label[1]/span/div/input"}
+  (Session info: headless chrome=109.0.5414.120)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x0153F243]
+	(No symbol) [0x014C7FD1]
+	(No symbol) [0x013BD04D]
+	(No symbol) [0x013EC0B0]
+	(No symbol) [0x013EC22B]
+	(No symbol) [0x0141E612]
+	(No symbol) [0x014085D4]
+	(No symbol) [0x0141C9EB]
+	(No symbol) [0x01408386]
+	(No symbol) [0x013E163C]
+	(No symbol) [0x013E269D]
+	GetHandleVerifier [0x017D9A22+2655074]
+	GetHandleVerifier [0x017CCA24+2601828]
+	GetHandleVerifier [0x015E8C0A+619850]
+	GetHandleVerifier [0x015E7830+614768]
+	(No symbol) [0x014D05FC]
+	(No symbol) [0x014D5968]
+	(No symbol) [0x014D5A55]
+	(No symbol) [0x014E051B]
+	BaseThreadInitThunk [0x7714EF3C+18]
+	RtlInitializeExceptionChain [0x7783360C+239]
+	RtlInitializeExceptionChain [0x778335DF+194]
+
+2023-05-26 18:37:56 main.py[line:193] ERROR: Message: unknown error: net::ERR_SSL_BAD_RECORD_MAC_ALERT
+  (Session info: headless chrome=109.0.5414.120)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x0037F243]
+	(No symbol) [0x00307FD1]
+	(No symbol) [0x001FD04D]
+	(No symbol) [0x001F9152]
+	(No symbol) [0x001F044D]
+	(No symbol) [0x001F12EF]
+	(No symbol) [0x001F071D]
+	(No symbol) [0x001EFB0B]
+	(No symbol) [0x001EFA5C]
+	(No symbol) [0x001EE7E8]
+	(No symbol) [0x001EEDC2]
+	(No symbol) [0x001FEA5B]
+	(No symbol) [0x0025D187]
+	(No symbol) [0x0024858C]
+	(No symbol) [0x0025C9EB]
+	(No symbol) [0x00248386]
+	(No symbol) [0x0022163C]
+	(No symbol) [0x0022269D]
+	GetHandleVerifier [0x00619A22+2655074]
+	GetHandleVerifier [0x0060CA24+2601828]
+	GetHandleVerifier [0x00428C0A+619850]
+	GetHandleVerifier [0x00427830+614768]
+	(No symbol) [0x003105FC]
+	(No symbol) [0x00315968]
+	(No symbol) [0x00315A55]
+	(No symbol) [0x0032051B]
+	BaseThreadInitThunk [0x7714EF3C+18]
+	RtlInitializeExceptionChain [0x7783360C+239]
+	RtlInitializeExceptionChain [0x778335DF+194]
+Traceback (most recent call last):
+  File "main.py", line 168, in loop
+  File "deliveroo.py", line 42, in deliverooScrape
+  File "selenium\webdriver\remote\webdriver.py", line 449, in get
+  File "selenium\webdriver\remote\webdriver.py", line 440, in execute
+  File "selenium\webdriver\remote\errorhandler.py", line 245, in check_response
+selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_SSL_BAD_RECORD_MAC_ALERT
+  (Session info: headless chrome=109.0.5414.120)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x0037F243]
+	(No symbol) [0x00307FD1]
+	(No symbol) [0x001FD04D]
+	(No symbol) [0x001F9152]
+	(No symbol) [0x001F044D]
+	(No symbol) [0x001F12EF]
+	(No symbol) [0x001F071D]
+	(No symbol) [0x001EFB0B]
+	(No symbol) [0x001EFA5C]
+	(No symbol) [0x001EE7E8]
+	(No symbol) [0x001EEDC2]
+	(No symbol) [0x001FEA5B]
+	(No symbol) [0x0025D187]
+	(No symbol) [0x0024858C]
+	(No symbol) [0x0025C9EB]
+	(No symbol) [0x00248386]
+	(No symbol) [0x0022163C]
+	(No symbol) [0x0022269D]
+	GetHandleVerifier [0x00619A22+2655074]
+	GetHandleVerifier [0x0060CA24+2601828]
+	GetHandleVerifier [0x00428C0A+619850]
+	GetHandleVerifier [0x00427830+614768]
+	(No symbol) [0x003105FC]
+	(No symbol) [0x00315968]
+	(No symbol) [0x00315A55]
+	(No symbol) [0x0032051B]
+	BaseThreadInitThunk [0x7714EF3C+18]
+	RtlInitializeExceptionChain [0x7783360C+239]
+	RtlInitializeExceptionChain [0x778335DF+194]
+
+2023-05-26 21:12:59 ubereats.py[line:296] INFO: {"ok":true,"server_date":"2023-05-26","server_time":1685131976233,"data":{"TableName":"UberEats","SumToPay":17,"OrderID":"168513197565154646-whaletct","BillType":"order","CreateTime":"2023-05-26 21:12:55","RefundCount":0,"RefundAmt":0,"UpdateTime":"2023-05-26 21:12:56","UpdateFlag":"168513197665179992","AppID":"web","AppType":"web","MchID":"","PayUserID":"167225002936801673","PayUserName":"","PayType":"mbpay","BillDate":"2023-05-26","IP":"86.158.215.220","TradeID":"thewt-1685131976226","Country":"Ó¢¹ú","BillID":"168513197565154646-whaletct","Area":"","BillJson":"{\"TableName\":\"UberEats\",\"SumToPay\":17,\"TotalAmt\":17,\"BillType\":3,\"MemberName\":\"UberEats: 7F4F2\",\"ServiceRate\":0,\"MemberCardID\":\"888\",\"TotalPoint\":0,\"Remark\":\"\",\"CompanyID\":\"thewt\",\"BranchID\":\"whaletct\",\"SumOfService\":0,\"AppID\":\"web\",\"AppType\":\"web\",\"PayUserID\":\"167225002936801673\",\"TableID\":\"991\",\"Items\":[{\"SumOfService\":0,\"MenuPriceOld\":7.6,\"MenuPrice\":7.6,\"CookList\":[{\"id\":\"TGDelivery\",\"name\":\"70% sugar\",\"price\":0,\"qty\":1},{\"id\":\"TGDelivery\",\"name\":\"Brown Sugar Boba ºÚÌÇÕäÖé\",\"price\":0.8,\"qty\":1}],\"MenuName\":\"Flaming Whale\",\"MenuID\":\"1010\",\"MenuAmt\":7.6,\"MenuService\":0,\"MenuUnit\":\".\",\"MenuList\":[],\"ParentID\":\"SP1010\",\"MenuQty\":1},{\"SumOfService\":0,\"MenuPriceOld\":6.2,\"MenuPrice\":6.2,\"CookList\":[{\"id\":\"TGDelivery\",\"name\":\"Normal sugar\",\"price\":0,\"qty\":1},{\"id\":\"TGDelivery\",\"name\":\"Brown Sugar Boba ºÚÌÇÕäÖé\",\"price\":0.8,\"qty\":1}],\"MenuName\":\"Brown sugar boba\",\"MenuID\":\"1001\",\"MenuAmt\":12.4,\"MenuService\":0,\"MenuUnit\":\".\",\"MenuList\":[],\"ParentID\":\"SP1010\",\"MenuQty\":2}],\"UserID\":\"167225002936801673\",\"PayType\":\"mbpay\",\"CreateTime\":\"2023-05-26 21:12:55\"}","BillInfo":"","MemberCardID":"888","PayChannel":"","TraceNo":"","CompanyID":"thewt","BarCode":"","CompanyName":"TheWhaleTea","BranchName":"¾¨²èChinatown","TableID":"991","ISP":"bt.com","City":"","Region":"","PayTime":"2023-05-26 21:12:56","PayState":1,"SumPaid":17,"BranchID":"whaletct"}}
+2023-05-26 21:29:12 ubereats.py[line:296] INFO: {"ok":true,"server_date":"2023-05-26","server_time":1685132948211,"data":{"TableName":"UberEats","SumToPay":13,"OrderID":"168513294765422287-whaletct","BillType":"order","CreateTime":"2023-05-26 21:29:07","RefundCount":0,"RefundAmt":0,"UpdateTime":"2023-05-26 21:29:08","UpdateFlag":"168513294865446401","AppID":"web","AppType":"web","MchID":"","PayUserID":"167225002936801673","PayUserName":"","PayType":"mbpay","BillDate":"2023-05-26","IP":"81.157.186.114","TradeID":"thewt-1685132948203","Country":"Ó¢¹ú","BillID":"168513294765422287-whaletct","Area":"","BillJson":"{\"TableName\":\"UberEats\",\"SumToPay\":13,\"TotalAmt\":13,\"BillType\":3,\"MemberName\":\"UberEats: 923FE\",\"ServiceRate\":0,\"MemberCardID\":\"888\",\"TotalPoint\":0,\"Remark\":\"\",\"CompanyID\":\"thewt\",\"BranchID\":\"whaletct\",\"SumOfService\":0,\"AppID\":\"web\",\"AppType\":\"web\",\"PayUserID\":\"167225002936801673\",\"TableID\":\"991\",\"Items\":[{\"SumOfService\":0,\"MenuPriceOld\":6.2,\"MenuPrice\":6.2,\"CookList\":[{\"id\":\"TGDelivery\",\"name\":\"Coconut Jelly Ò¬¹û\",\"price\":0.6,\"qty\":1},{\"id\":\"TGDelivery\",\"name\":\"30% sugar\",\"price\":0,\"qty\":1}],\"MenuName\":\"Sunrise Peach Tea\",\"MenuID\":\"5001\",\"MenuAmt\":6.2,\"MenuService\":0,\"MenuUnit\":\".\",\"MenuList\":[],\"ParentID\":\"SP1010\",\"MenuQty\":1},{\"SumOfService\":0,\"MenuPriceOld\":6.8,\"MenuPrice\":6.8,\"CookList\":[{\"id\":\"TGDelivery\",\"name\":\"Lychee Popping Ball\",\"price\":1,\"qty\":1},{\"id\":\"TGDelivery\",\"name\":\"30% sugar\",\"price\":0,\"qty\":1}],\"MenuName\":\"Perfect Lychee\",\"MenuID\":\"4004\",\"MenuAmt\":6.8,\"MenuService\":0,\"MenuUnit\":\".\",\"MenuList\":[],\"ParentID\":\"SP1010\",\"MenuQty\":1}],\"UserID\":\"167225002936801673\",\"PayType\":\"mbpay\",\"CreateTime\":\"2023-05-26 21:29:07\"}","BillInfo":"","MemberCardID":"888","PayChannel":"","TraceNo":"","CompanyID":"thewt","BarCode":"","CompanyName":"TheWhaleTea","BranchName":"¾¨²èChinatown","TableID":"991","ISP":"bt.com","City":"","Region":"","PayTime":"2023-05-26 21:29:08","PayState":1,"SumPaid":13,"BranchID":"whaletct"}}
+2023-05-26 21:51:24 ubereats.py[line:296] INFO: {"ok":true,"server_date":"2023-05-26","server_time":1685134280414,"data":{"TableName":"UberEats","SumToPay":12,"OrderID":"168513428065473469-whaletct","BillType":"order","CreateTime":"2023-05-26 21:51:20","RefundCount":0,"RefundAmt":0,"UpdateTime":"2023-05-26 21:51:20","UpdateFlag":"168513428065499495","AppID":"web","AppType":"web","MchID":"","PayUserID":"167225002936801673","PayUserName":"","PayType":"mbpay","BillDate":"2023-05-26","IP":"86.158.215.220","TradeID":"thewt-1685134280406","Country":"Ó¢¹ú","BillID":"168513428065473469-whaletct","Area":"","BillJson":"{\"TableName\":\"UberEats\",\"SumToPay\":12,\"TotalAmt\":12,\"BillType\":3,\"MemberName\":\"UberEats: 94E97\",\"ServiceRate\":0,\"MemberCardID\":\"888\",\"TotalPoint\":0,\"Remark\":\"\",\"CompanyID\":\"thewt\",\"BranchID\":\"whaletct\",\"SumOfService\":0,\"AppID\":\"web\",\"AppType\":\"web\",\"PayUserID\":\"167225002936801673\",\"TableID\":\"991\",\"Items\":[{\"SumOfService\":0,\"MenuPriceOld\":7.6,\"MenuPrice\":7.6,\"CookList\":[{\"id\":\"TGDelivery\",\"name\":\"Normal sugar\",\"price\":0,\"qty\":1},{\"id\":\"TGDelivery\",\"name\":\"Coconut Jelly Ò¬¹û\",\"price\":0.6,\"qty\":1},{\"id\":\"TGDelivery\",\"name\":\"Lychee Popping Ball\",\"price\":1,\"qty\":1}],\"MenuName\":\"Fruity Tea\",\"MenuID\":\"4001\",\"MenuAmt\":7.6,\"MenuService\":0,\"MenuUnit\":\".\",\"MenuList\":[],\"ParentID\":\"SP1010\",\"MenuQty\":1},{\"SumOfService\":0,\"MenuPriceOld\":7.4,\"MenuPrice\":7.4,\"CookList\":[{\"id\":\"TGDelivery\",\"name\":\"Coconut Jelly Ò¬¹û\",\"price\":0.6,\"qty\":1},{\"id\":\"TGDelivery\",\"name\":\"Mango Popping Ball\",\"price\":1,\"qty\":1},{\"id\":\"TGDelivery\",\"name\":\"Normal sugar\",\"price\":0,\"qty\":1}],\"MenuName\":\"Perfect Lychee\",\"MenuID\":\"4004\",\"MenuAmt\":7.4,\"MenuService\":0,\"MenuUnit\":\".\",\"MenuList\":[],\"ParentID\":\"SP1010\",\"MenuQty\":1}],\"UserID\":\"167225002936801673\",\"PayType\":\"mbpay\",\"CreateTime\":\"2023-05-26 21:51:20\"}","BillInfo":"","MemberCardID":"888","PayChannel":"","TraceNo":"","CompanyID":"thewt","BarCode":"","CompanyName":"TheWhaleTea","BranchName":"¾¨²èChinatown","TableID":"991","ISP":"bt.com","City":"","Region":"","PayTime":"2023-05-26 21:51:20","PayState":1,"SumPaid":12,"BranchID":"whaletct"}}
+2024-01-09 17:15:24 main.py[line:100] INFO: Program Start--------------version=1.2.0
+2024-01-09 17:15:30 main.py[line:1200] INFO: Program Closed--------------

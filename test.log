@@ -8,3 +8,104 @@
 2024-04-05 14:54:03 main.py[line:1217] INFO: Program Closed--------------
 2024-04-05 16:24:02 main.py[line:98] INFO: Program Start--------------version=1.2.1
 2024-04-05 16:24:11 main.py[line:1217] INFO: Program Closed--------------
+2024-04-06 14:12:33 main.py[line:98] INFO: Program Start--------------version=1.2.1
+2024-04-06 14:23:29 main.py[line:1217] INFO: Program Closed--------------
+2024-04-06 14:23:35 main.py[line:98] INFO: Program Start--------------version=1.2.1
+2024-04-06 14:25:08 main.py[line:1217] INFO: Program Closed--------------
+2024-04-06 14:25:16 main.py[line:98] INFO: Program Start--------------version=1.2.1
+2024-04-06 14:26:13 main.py[line:1217] INFO: Program Closed--------------
+2024-04-06 14:26:25 main.py[line:98] INFO: Program Start--------------version=1.2.1
+2024-04-06 14:27:07 main.py[line:1217] INFO: Program Closed--------------
+2024-04-06 14:28:09 main.py[line:98] INFO: Program Start--------------version=1.2.1
+2024-04-06 14:29:33 main.py[line:1217] INFO: Program Closed--------------
+2024-04-06 14:29:36 main.py[line:98] INFO: Program Start--------------version=1.2.1
+2024-04-06 14:39:05 main.py[line:98] INFO: Program Start--------------version=1.2.1
+2024-04-06 14:40:06 main.py[line:1217] INFO: Program Closed--------------
+2024-04-06 14:40:10 main.py[line:98] INFO: Program Start--------------version=1.2.1
+2024-04-06 14:43:13 main.py[line:98] INFO: Program Start--------------version=1.2.1
+2024-04-06 14:44:09 main.py[line:1217] INFO: Program Closed--------------
+2024-04-06 14:44:13 main.py[line:98] INFO: Program Start--------------version=1.2.1
+2024-04-06 15:00:49 deliveroo_api.py[line:56] ERROR: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "D:/AutoIn-main/AutoIn-main/Client\deliveroo_api.py", line 54, in deliveroo_API
+    response = json.loads(requests.get(url, headers=headers).text)
+  File "C:\Users\X\AppData\Local\Programs\Python\Python38-32\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\X\AppData\Local\Programs\Python\Python38-32\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\X\AppData\Local\Programs\Python\Python38-32\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2024-04-06 15:09:07 deliveroo_api.py[line:56] ERROR: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "D:\AutoIn-main\AutoIn-main\Client\deliveroo_api.py", line 54, in deliveroo_API
+    response = json.loads(requests.get(url, headers=headers).text)
+  File "C:\Users\X\AppData\Local\Programs\Python\Python38-32\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\X\AppData\Local\Programs\Python\Python38-32\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\X\AppData\Local\Programs\Python\Python38-32\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2024-04-06 15:12:13 deliveroo_api.py[line:56] ERROR: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "D:/AutoIn-main/AutoIn-main/Client\deliveroo_api.py", line 54, in deliveroo_API
+    response = json.loads(requests.get(url, headers=headers).text)
+  File "C:\Users\X\AppData\Local\Programs\Python\Python38-32\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\X\AppData\Local\Programs\Python\Python38-32\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\X\AppData\Local\Programs\Python\Python38-32\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2024-04-06 15:49:05 deliveroo_api.py[line:56] ERROR: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "D:/AutoIn-main/AutoIn-main/Client\deliveroo_api.py", line 54, in deliveroo_API
+    response = json.loads(requests.get(url, headers=headers).text)
+  File "C:\Users\X\AppData\Local\Programs\Python\Python38-32\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\X\AppData\Local\Programs\Python\Python38-32\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\X\AppData\Local\Programs\Python\Python38-32\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2024-04-06 17:22:29 main.py[line:98] INFO: Program Start--------------version=1.2.1
+2024-04-06 17:24:32 main.py[line:98] INFO: Program Start--------------version=1.2.1
+2024-04-06 17:26:57 main.py[line:98] INFO: Program Start--------------version=1.2.1
+2024-04-06 17:29:18 main.py[line:98] INFO: Program Start--------------version=1.2.1
+2024-04-06 17:32:34 main.py[line:98] INFO: Program Start--------------version=1.2.1
+2024-04-06 17:34:03 login.py[line:179] ERROR: name 'f' is not defined
+Traceback (most recent call last):
+  File "D:/AutoIn-main/AutoIn-main/Client\login.py", line 171, in deliverooLogin
+    url = f
+NameError: name 'f' is not defined
+2024-04-06 17:34:19 login.py[line:179] ERROR: name 'f' is not defined
+Traceback (most recent call last):
+  File "D:/AutoIn-main/AutoIn-main/Client\login.py", line 171, in deliverooLogin
+    url = f
+NameError: name 'f' is not defined
+2024-04-06 17:35:01 main.py[line:1217] INFO: Program Closed--------------
+2024-04-06 17:35:06 main.py[line:98] INFO: Program Start--------------version=1.2.1
+2024-04-06 17:38:07 main.py[line:98] INFO: Program Start--------------version=1.2.1
+2024-04-06 17:39:11 login.py[line:178] ERROR: name 'brandId' is not defined
+Traceback (most recent call last):
+  File "D:/AutoIn-main/AutoIn-main/Client\login.py", line 171, in deliverooLogin
+    url = f"https://api.developers.deliveroo.com/order/v2/brand/{brandId}/restaurant/{branchId}/orders?start_date={iso_date}00:00:00Z"
+NameError: name 'brandId' is not defined
+2024-04-06 17:39:33 login.py[line:178] ERROR: name 'brandId' is not defined
+Traceback (most recent call last):
+  File "D:/AutoIn-main/AutoIn-main/Client\login.py", line 171, in deliverooLogin
+    url = f"https://api.developers.deliveroo.com/order/v2/brand/{brandId}/restaurant/{branchId}/orders?start_date={iso_date}00:00:00Z"
+NameError: name 'brandId' is not defined
+2024-04-06 17:39:36 login.py[line:178] ERROR: name 'brandId' is not defined
+Traceback (most recent call last):
+  File "D:/AutoIn-main/AutoIn-main/Client\login.py", line 171, in deliverooLogin
+    url = f"https://api.developers.deliveroo.com/order/v2/brand/{brandId}/restaurant/{branchId}/orders?start_date={iso_date}00:00:00Z"
+NameError: name 'brandId' is not defined
+2024-04-06 17:39:39 main.py[line:1217] INFO: Program Closed--------------
+2024-04-06 17:39:55 main.py[line:98] INFO: Program Start--------------version=1.2.1
+2024-04-06 17:43:31 main.py[line:98] INFO: Program Start--------------version=1.2.1
+2024-04-06 17:46:08 main.py[line:98] INFO: Program Start--------------version=1.2.1
+2024-04-06 17:50:42 main.py[line:98] INFO: Program Start--------------version=1.2.1
+2024-04-06 17:55:18 main.py[line:98] INFO: Program Start--------------version=1.2.1
+2024-04-06 17:57:34 main.py[line:1217] INFO: Program Closed--------------

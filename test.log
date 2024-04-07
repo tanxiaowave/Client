@@ -109,3 +109,66 @@ NameError: name 'brandId' is not defined
 2024-04-06 17:50:42 main.py[line:98] INFO: Program Start--------------version=1.2.1
 2024-04-06 17:55:18 main.py[line:98] INFO: Program Start--------------version=1.2.1
 2024-04-06 17:57:34 main.py[line:1217] INFO: Program Closed--------------
+2024-04-06 18:05:32 main.py[line:98] INFO: Program Start--------------version=1.2.1
+2024-04-06 18:05:49 login.py[line:201] ERROR: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "D:\AutoIn-main\AutoIn-main\Client\login.py", line 196, in deliverooLogin
+    response = json.loads(requests.get(url, headers=headers).text)
+  File "C:\Users\X\AppData\Local\Programs\Python\Python38-32\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\X\AppData\Local\Programs\Python\Python38-32\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\X\AppData\Local\Programs\Python\Python38-32\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2024-04-06 18:05:56 main.py[line:1217] INFO: Program Closed--------------
+2024-04-06 18:05:58 main.py[line:98] INFO: Program Start--------------version=1.2.1
+2024-04-06 18:06:43 login.py[line:201] ERROR: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "D:\AutoIn-main\AutoIn-main\Client\login.py", line 196, in deliverooLogin
+    response = json.loads(requests.get(url, headers=headers).text)
+  File "C:\Users\X\AppData\Local\Programs\Python\Python38-32\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\X\AppData\Local\Programs\Python\Python38-32\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\X\AppData\Local\Programs\Python\Python38-32\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2024-04-06 18:07:06 main.py[line:98] INFO: Program Start--------------version=1.2.1
+2024-04-06 18:07:19 login.py[line:201] ERROR: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "D:\AutoIn-main\AutoIn-main\Client\login.py", line 196, in deliverooLogin
+    response = json.loads(requests.get(url, headers=headers).text)
+  File "C:\Users\X\AppData\Local\Programs\Python\Python38-32\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\X\AppData\Local\Programs\Python\Python38-32\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\X\AppData\Local\Programs\Python\Python38-32\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2024-04-06 18:07:26 login.py[line:201] ERROR: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "D:\AutoIn-main\AutoIn-main\Client\login.py", line 196, in deliverooLogin
+    response = json.loads(requests.get(url, headers=headers).text)
+  File "C:\Users\X\AppData\Local\Programs\Python\Python38-32\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\X\AppData\Local\Programs\Python\Python38-32\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\X\AppData\Local\Programs\Python\Python38-32\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2024-04-06 18:07:30 main.py[line:1217] INFO: Program Closed--------------
+2024-04-06 21:30:20 main.py[line:98] INFO: Program Start--------------version=1.2.1
+2024-04-06 21:31:52 main.py[line:98] INFO: Program Start--------------version=1.2.1
+2024-04-07 10:42:30 main.py[line:98] INFO: Program Start--------------version=1.2.1
+2024-04-07 10:42:59 main.py[line:1217] INFO: Program Closed--------------
+2024-04-07 10:43:59 main.py[line:98] INFO: Program Start--------------version=1.2.1
+2024-04-07 10:46:16 main.py[line:98] INFO: Program Start--------------version=1.2.1
+2024-04-07 10:46:30 main.py[line:1217] INFO: Program Closed--------------
+2024-04-07 10:47:24 main.py[line:98] INFO: Program Start--------------version=1.2.1
+2024-04-07 10:52:24 main.py[line:1217] INFO: Program Closed--------------
+2024-04-07 10:52:49 main.py[line:98] INFO: Program Start--------------version=1.2.1
+2024-04-07 10:54:01 main.py[line:98] INFO: Program Start--------------version=1.2.1
+2024-04-07 10:54:25 main.py[line:98] INFO: Program Start--------------version=1.2.1
+2024-04-07 10:55:14 main.py[line:98] INFO: Program Start--------------version=1.2.1
+2024-04-07 10:57:23 main.py[line:1217] INFO: Program Closed--------------

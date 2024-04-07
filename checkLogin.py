@@ -12,28 +12,28 @@ headless_flag = reader.get("Flag", "headless_flag")
 
 def checklogin(hun, ub, de, fan):
     uber, panda, deliveroo, fantuan = False, False, False, False
-    options = webdriver.ChromeOptions()
-    # 如果通道开通了，检查该通道登陆状态
-    if ub:
-        # 只有uber需要加之前保存的登录状态
-        options.add_argument(f'user-data-dir={os.getcwd()}/selenium')
-    # if headless_flag = false, selenium activity will be visible
-    if headless_flag == 'True':
-        options.add_argument('--headless')
-        options.add_argument('--no-sandbox')
-    options.add_argument("--proxy-server='direct://'")
-    options.add_argument("--proxy-bypass-list=*")
-    options.add_argument("--log-level=3")
-    options.add_argument("--silent")
-    driver = webdriver.Chrome('chromedriver', options=options)
-
-    if ub:
-        driver.get("https://merchants.ubereats.com/manager/orders")
-        # uber如果没登陆，会跳转到登录页面，url就不会是下面这个
-        if driver.current_url != "https://merchants.ubereats.com/manager/orders":
-            uber = False
-        else:
-            uber = True
+    # options = webdriver.ChromeOptions()
+    # # 如果通道开通了，检查该通道登陆状态
+    # if ub:
+    #     # 只有uber需要加之前保存的登录状态
+    #     options.add_argument(f'user-data-dir={os.getcwd()}/selenium')
+    # # if headless_flag = false, selenium activity will be visible
+    # if headless_flag == 'True':
+    #     options.add_argument('--headless')
+    #     options.add_argument('--no-sandbox')
+    # options.add_argument("--proxy-server='direct://'")
+    # options.add_argument("--proxy-bypass-list=*")
+    # options.add_argument("--log-level=3")
+    # options.add_argument("--silent")
+    # driver = webdriver.Chrome('chromedriver', options=options)
+    #
+    # if ub:
+    #     driver.get("https://merchants.ubereats.com/manager/orders")
+    #     # uber如果没登陆，会跳转到登录页面，url就不会是下面这个
+    #     if driver.current_url != "https://merchants.ubereats.com/manager/orders":
+    #         uber = False
+    #     else:
+    #         uber = True
 
     if hun:
         driver.get("https://merchant-uk.hungrypanda.co/order/ordermanage")

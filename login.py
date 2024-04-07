@@ -199,7 +199,7 @@ def deliverooLogin(label):
         label.config(text=" Logged In ", foreground="white", bg="#47A57D", bd=0)
     except Exception as e:
         logging.exception(e)
-        driver.quit()
+        # driver.quit()
         tk.messagebox.showinfo(title='Wrong account',
                                 message="The account information you have input for Deliveroo is not valid, please check and try again.")
         return
@@ -348,7 +348,7 @@ def fantuanLogin(label):
 
     tk.Button(login, fg="white", bg="#47A57D", text="   Enter   ", command=check_fantuan).grid(row=3, column=1)
 
-    login.mainloop()
+    # login.mainloop()
 
 
 # 打开uberEats登录页面手动登录

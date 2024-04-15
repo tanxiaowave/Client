@@ -14,7 +14,7 @@ from deliveroo import deliverooScrape
 from deliveroo_api import deliveroo_API
 from fantuan import fantuanScrape
 from ubereats import uberScrape
-from login import pandaLogin, deliverooLogin, fantuanLogin, uberLogin
+# from login import pandaLogin, deliverooLogin, fantuanLogin, uberLogin
 from checkLogin import checklogin
 import requests
 import json
@@ -31,6 +31,7 @@ from win32event import CreateMutex
 from win32api import CloseHandle, GetLastError
 from winerror import ERROR_ALREADY_EXISTS
 import sys
+from run import APP
 
 
 # 不知道从哪抄的
@@ -227,6 +228,7 @@ def loop():
                     deliveroo_mode = "API"
                 if deliveroo_mode == "API":
                     temp = deliveroo_API()
+                    time.sleep(40)
                 else:
                     temp = deliverooScrape()
                 if temp == False:
@@ -253,43 +255,43 @@ def loop():
         except Exception as e:
             logging.exception(e)
 
-        try:
-            if loopub:
-                temp = uberScrape()
-                if temp == False:
-                    loopub = False
-                    ublog = False
-                    login_uber.config(text=" Log Now ", foreground="white", bg="#F36249")
-                    monitor_uber.config(text="Stopped", foreground="#F36249")
-                    # login_status.tag_config("u", foreground="red")
-                    ublogin = tk.Toplevel(bg="#272727")
-                    ublogin.resizable(False, False)
-                    ublogin.grab_set()
-                    ublogin.focus_force()
-                    ublogin.wm_attributes("-topmost", 1)
-                    ublogin.title("Uber Eats logged out!")
-                    ublogin.geometry(
-                        f'{280}x{80}+{round(ublogin.winfo_screenwidth() / 2 - 280 / 2)}+{round(ublogin.winfo_screenheight() / 2 - 80 / 2)}')
-                    tk.Label(ublogin, text='Uber Eats has logged out!\n Please manually login\n to Uber Eats platform again!', font=tk.font.Font(family="Arial", size=13), fg='#F37249', bg="#272727").pack()
-                try:
-                    if temp.__contains__("库存数量不足"):
-                        try:
-                            top.destroy()
-                        except:
-                            pass
-                        top = tk.Toplevel(wd)
-                        top.title("线上库存不足！")
-                        top.wm_attributes("-topmost", 1)
-                        top.config(bg="#272727")
-                        top.geometry(
-                            f'{280}x{40}+{round(top.winfo_screenwidth() / 2 - 280 / 2)}+{round(top.winfo_screenheight() / 2 - 40 / 2)}')
-                        label = tk.Label(top, text=temp, fg="#F36249", bg="#272727",
-                                         font=tk.font.Font(size=12))
-                        label.pack()
-                except:
-                    pass
-        except Exception as e:
-            logging.exception(e)
+        # try:
+        #     if loopub:
+        #         temp = APP()
+        #         if temp == False:
+        #             loopub = False
+        #             ublog = False
+        #             login_uber.config(text=" Log Now ", foreground="white", bg="#F36249")
+        #             monitor_uber.config(text="Stopped", foreground="#F36249")
+        #             # login_status.tag_config("u", foreground="red")
+        #             ublogin = tk.Toplevel(bg="#272727")
+        #             ublogin.resizable(False, False)
+        #             ublogin.grab_set()
+        #             ublogin.focus_force()
+        #             ublogin.wm_attributes("-topmost", 1)
+        #             ublogin.title("Uber Eats logged out!")
+        #             ublogin.geometry(
+        #                 f'{280}x{80}+{round(ublogin.winfo_screenwidth() / 2 - 280 / 2)}+{round(ublogin.winfo_screenheight() / 2 - 80 / 2)}')
+        #             tk.Label(ublogin, text='Uber Eats has logged out!\n Please manually login\n to Uber Eats platform again!', font=tk.font.Font(family="Arial", size=13), fg='#F37249', bg="#272727").pack()
+        #         try:
+        #             if temp.__contains__("库存数量不足"):
+        #                 try:
+        #                     top.destroy()
+        #                 except:
+        #                     pass
+        #                 top = tk.Toplevel(wd)
+        #                 top.title("线上库存不足！")
+        #                 top.wm_attributes("-topmost", 1)
+        #                 top.config(bg="#272727")
+        #                 top.geometry(
+        #                     f'{280}x{40}+{round(top.winfo_screenwidth() / 2 - 280 / 2)}+{round(top.winfo_screenheight() / 2 - 40 / 2)}')
+        #                 label = tk.Label(top, text=temp, fg="#F36249", bg="#272727",
+        #                                  font=tk.font.Font(size=12))
+        #                 label.pack()
+        #         except:
+        #             pass
+        # except Exception as e:
+        #     logging.exception(e)
 
         try:
             if loopfan:
@@ -356,7 +358,7 @@ def stoploopdeliveroo():
 def startloopuber():
     global loopub, ub, ublog
     loopub = ub
-    # threading.Thread(target=loopuber, daemon=True).start()
+    threading.Thread(target=loopubt, daemon=True).start()
     if loopub:
         monitor_uber.config(text="Monitoring", foreground="#47A57D")
     else:
@@ -545,6 +547,12 @@ if not fan:
     fantuan_button = tk.Button(wd, text=" Start ", command=startloopfantuan, font=fontStyle, fg='white', bg="#999999")
     fantuan_stop_button = tk.Button(wd, text=" Stop ", command=startloopfantuan, font=fontStyle, fg='white', bg="#999999")
 
+
+def loopubt():
+
+    while loopub:
+        app_instance = APP()
+        print("-------------30-------------")
 
 # 设置循环频率
 def frequency_setting(root):

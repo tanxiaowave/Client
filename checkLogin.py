@@ -35,47 +35,51 @@ def checklogin(hun, ub, de, fan):
     #     else:
     #         uber = True
 
-    if hun:
-        driver.get("https://merchant-uk.hungrypanda.co/order/ordermanage")
-        time.sleep(2)
-        if driver.current_url != 'https://merchant-uk.hungrypanda.co/order/ordermanage':
-            driver.get("https://merchant-uk.hungrypanda.co/login")
-            time.sleep(1)
-            # 写死的rsa钥
-            pri = rsa.PrivateKey(
-                10690849382239354932069678647576775530502785728974248210646711710842662286687729661457284316695477606433550792821419683402634484378249872944165297782246523,
-                65537,
-                7002712700928804011838917939227853273317722595990151016778949911089213823265260722795698382337717248876309656289331967090125041513510782458343001103454593,
-                7165380796988618938065214954530466870443807483684172787495616047866899293086811303,
-                1492014128088262667286826329565602575995354986910798283007464819843657741)
-            try:
-                with open("panda_username_info.txt", "rb") as f:
-                    username = f.readline()
-                    f.close()
-                with open("panda_password_info.txt", "rb") as f:
-                    password = f.readline()
-                    f.close()
-                # 用密钥解密账号密码文件
-                username = rsa.decrypt(username, pri).decode('utf-8')
-                password = rsa.decrypt(password, pri).decode('utf-8')
-                # 找到账号密码元素，填入账号密码
-                u = driver.find_element('id', 'phone')
-                u.send_keys(username)
-                p = driver.find_element('id', 'password')
-                p.send_keys(password)
-                # 找到登录按钮，点击登录
-                btn = driver.find_element('xpath', '//*[@id="root"]/div/div/div/div/div/div/div/form/div[5]/div/div/div/button')
-                btn.click()
-                time.sleep(1)
-                # 睡眠一秒后检查是否还在登录界面，还在登录界面说明登陆失败，登陆状态返回false
-                if driver.current_url == "https://merchant-uk.hungrypanda.co/login":
-                    panda = False
-                else:
-                    panda = True
-            except:
-                panda = False
-        else:
-            panda = True
+    if ub:
+        uber = True
+
+
+    # if hun:
+    #     driver.get("https://merchant-uk.hungrypanda.co/order/ordermanage")
+    #     time.sleep(2)
+    #     if driver.current_url != 'https://merchant-uk.hungrypanda.co/order/ordermanage':
+    #         driver.get("https://merchant-uk.hungrypanda.co/login")
+    #         time.sleep(1)
+    #         # 写死的rsa钥
+    #         pri = rsa.PrivateKey(
+    #             10690849382239354932069678647576775530502785728974248210646711710842662286687729661457284316695477606433550792821419683402634484378249872944165297782246523,
+    #             65537,
+    #             7002712700928804011838917939227853273317722595990151016778949911089213823265260722795698382337717248876309656289331967090125041513510782458343001103454593,
+    #             7165380796988618938065214954530466870443807483684172787495616047866899293086811303,
+    #             1492014128088262667286826329565602575995354986910798283007464819843657741)
+    #         try:
+    #             with open("panda_username_info.txt", "rb") as f:
+    #                 username = f.readline()
+    #                 f.close()
+    #             with open("panda_password_info.txt", "rb") as f:
+    #                 password = f.readline()
+    #                 f.close()
+    #             # 用密钥解密账号密码文件
+    #             username = rsa.decrypt(username, pri).decode('utf-8')
+    #             password = rsa.decrypt(password, pri).decode('utf-8')
+    #             # 找到账号密码元素，填入账号密码
+    #             u = driver.find_element('id', 'phone')
+    #             u.send_keys(username)
+    #             p = driver.find_element('id', 'password')
+    #             p.send_keys(password)
+    #             # 找到登录按钮，点击登录
+    #             btn = driver.find_element('xpath', '//*[@id="root"]/div/div/div/div/div/div/div/form/div[5]/div/div/div/button')
+    #             btn.click()
+    #             time.sleep(1)
+    #             # 睡眠一秒后检查是否还在登录界面，还在登录界面说明登陆失败，登陆状态返回false
+    #             if driver.current_url == "https://merchant-uk.hungrypanda.co/login":
+    #                 panda = False
+    #             else:
+    #                 panda = True
+    #         except:
+    #             panda = False
+    #     else:
+    #         panda = True
 
     # if de:
     #     driver.get("https://restaurant-hub.deliveroo.net/live-orders")

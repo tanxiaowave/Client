@@ -262,7 +262,7 @@ def deliverooLogin(label):
     #
     # tk.Button(login, fg="white", bg="#47A57D", text="   Enter   ", command=check_deliveroo).grid(row=3, column=1)
 
-    login.mainloop()
+    # login.mainloop()
 
 
 # 录入api-key和商户id

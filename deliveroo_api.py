@@ -18,6 +18,7 @@ merch_id = reader.get("Store", "merchid")
 branch_id = reader.get("Store", "branchid")
 orgId = reader.get("Deliveroo_Branch", "orgId")
 branchId = reader.get("Deliveroo_Branch", "branchId")
+UserID = reader.get("Store", "userid")
 try:
     brandId = reader.get("Deliveroo_Branch", "brandId")
 except:
@@ -295,7 +296,7 @@ def deliveroo_API():
         "MemberName": f"Deliveroo: {display_id}",
         "Items": items,
         "CompanyID": merch_id,
-        "UserID": "167225002936801673"
+        "UserID": UserID
     }
 
     headers = {"Cookie": "user_app_id=web; user_web=167225002936801673; hash_web=5d95b5c7e70cdc9b799d918e52ee167b"}
@@ -356,3 +357,4 @@ def deliveroo_API():
         # response = requests.post(url='http://3.11.136.6:8000/order/new',json=data)
     except:
         pass
+

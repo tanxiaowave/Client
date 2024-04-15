@@ -1,3 +1,6 @@
-from deliveroo_api import deliveroo_API
+from rloginuber import APP
 
-deliveroo_API()
+
+app_instance = APP()
+
+print("45")

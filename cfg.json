@@ -1,0 +1,19 @@
+{
+    "proxy": null,
+    "chrome": "./Chrome121/",
+    "port" : 9333,
+    "headless": 0,
+    "email": "sgypt6ha1v9p@9m9.fun",
+    "db_enable": true,
+    "server": "127.0.0.1",
+    "user": "sa",
+    "password": "pos",
+    "database": "rms_db",
+    "h2": {
+        "Cookie": "user_app_id=web; user_web=167225002936801673; hash_web=5d95b5c7e70cdc9b799d918e52ee167b"
+    },
+    "BranchID":"whaletqw",
+    "CompanyID": "imenus",
+    "UserID": "170988753528017619",
+    "restaurantUUID":"40f81266-3b99-453c-9820-248788b2dd94"
+}

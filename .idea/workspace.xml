@@ -2,39 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb0e4fa3-b5ba-4d99-8e2d-7973aad3c0dd" name="更改" comment="弄好了，deliveroo">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pandawebd.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sqlalitis.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test0.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test4.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test5.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test6.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test7.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test8.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test9.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/testpanda.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zjdb.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AutoIn_Update.exe" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/top_up_QR_temp.png" afterPath="$PROJECT_DIR$/top_up_QR_temp.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/google-chrome-10505195127-32bit-downzen.com.exe" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main.exe" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/run.exe" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/testpanda.exe" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cfg.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/deliveroo_apibak.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/deliveroo_schedule.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ids.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main.spec" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/panda_dr - 副本.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/panda_drtt.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/run.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/run.spec" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/settingsqueens.INI" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test2.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test3.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/testpanda - 副本.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/xmwm.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/checkLogin.py" afterPath="$PROJECT_DIR$/checkLogin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deliveroo_api.py" afterPath="$PROJECT_DIR$/deliveroo_api.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deliveroo_api_lastorder.txt" afterPath="$PROJECT_DIR$/deliveroo_api_lastorder.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/deliveroo_lastorder.txt" afterPath="$PROJECT_DIR$/deliveroo_lastorder.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fantuan.py" afterPath="$PROJECT_DIR$/fantuan.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fantuan_lastorder.txt" afterPath="$PROJECT_DIR$/fantuan_lastorder.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fantuan_orders.py" afterPath="$PROJECT_DIR$/fantuan_orders.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hungrypanda_lastorder.txt" afterPath="$PROJECT_DIR$/hungrypanda_lastorder.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/last.txt" afterPath="$PROJECT_DIR$/last.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login.py" afterPath="$PROJECT_DIR$/login.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/panda_password_info.txt" afterPath="$PROJECT_DIR$/panda_password_info.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/panda_username_info.txt" afterPath="$PROJECT_DIR$/panda_username_info.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/settings.INI" afterPath="$PROJECT_DIR$/settings.INI" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.log" afterPath="$PROJECT_DIR$/test.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.py" afterPath="$PROJECT_DIR$/test.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ubereats_lastorder.txt" afterPath="$PROJECT_DIR$/ubereats_lastorder.txt" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -53,6 +40,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
+      <file leaf-file-name="get_json_data.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/get_json_data.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="3" column="39" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="testpanda.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testpanda.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -107,7 +104,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="432">
@@ -591,7 +588,21 @@
       <option name="project" value="LOCAL" />
       <updated>1720744572657</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="弄好了，deliveroo">
+      <created>1720744675302</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1720744675302</updated>
+    </task>
+    <task id="LOCAL-00006" summary="弄好了，deliveroo">
+      <created>1720747594086</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1720747594086</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView">
@@ -605,11 +616,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1030" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17382088" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17382088" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32988507" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32934132" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47664672" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42035928" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -658,9 +669,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="修改setting" />
-    <MESSAGE value="弄好了，deliveroo" />
     <MESSAGE value="弄好了js panda数据的抓取" />
-    <option name="LAST_COMMIT_MESSAGE" value="弄好了js panda数据的抓取" />
+    <MESSAGE value="弄好了，deliveroo" />
+    <option name="LAST_COMMIT_MESSAGE" value="弄好了，deliveroo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1248,14 +1259,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/get_json_data.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hungrypanda_lastorder.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -1356,6 +1359,14 @@
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/get_json_data.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="3" column="39" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>

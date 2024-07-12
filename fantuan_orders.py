@@ -18,8 +18,8 @@ try:
     with open("fantuan_shopid.txt", "rb") as f:
         password = f.readline()
         f.close()
-    appkey = rsa.decrypt(username, pri).decode('utf-8')
-    shop_id = rsa.decrypt(password, pri).decode('utf-8')
+    appkey = ' 1b44a528-58de-4f07-b842-31cc492f0ede'
+    shop_id = 2277
 except:
     pass
 
@@ -36,8 +36,8 @@ data = {
     }
 }
 url = "https://openapi.fantuan.ca/api/v1/order/page"
-response = json.loads(requests.post(url, json=data, headers=headers).text)
-text = ""
+response = requests.post(url, json=data, headers=headers)
+print(response.text)
 
 
 def settext():

@@ -6,6 +6,11 @@ import logging
 import time
 import configparser
 from datetime import datetime
+from datetime import timedelta
+import re
+from datetime import datetime, timedelta, timezone
+
+from dateutil import parser
 
 reader = configparser.ConfigParser()
 reader.read("settings.INI")
@@ -47,6 +52,8 @@ def deliveroo_API():
 
         # Then use the token to get orders
         iso_date = datetime.now().isoformat()[:11]
+        #把时间调到前面一天
+        # iso_date = (datetime.now() - timedelta(days=1)).isoformat()[:11]
         url = f"https://api.developers.deliveroo.com/order/v2/brand/{brandId}/restaurant/{branchId}/orders?start_date={iso_date}00:00:00Z"
         headers = {
             "accept": "application/json",
@@ -110,14 +117,16 @@ def deliveroo_API():
                 except:
                     pass
 
-                if o['asap'] == True:
+                if o['asap'] == True and datetime.now(timezone.utc) - timedelta(minutes=50) < parser.parse(o['start_preparing_at']):
                     # asap order
+                    print(datetime.now(timezone.utc) - timedelta(minutes=30))
+                    print(parser.parse(o['start_preparing_at']))
                     order_id = o['id']
                     display_id = o['display_id']
                     break
                 else:
                     # schedule order
-                    if datetime.now().isoformat() > o['start_preparing_at']:
+                    if o['asap'] == False and datetime.now().isoformat() > o['start_preparing_at']:
                         # schedule order but already need to start preparing
                         order_id = o['id']
                         display_id = o['display_id']
@@ -191,6 +200,8 @@ def deliveroo_API():
             except Exception as e:
                 logging.exception(e)
                 return
+
+
             # no due scheduled order either, return
             if order_id == "":
                 print("Deliveroo: No new order in recent 10 orders")
@@ -219,26 +230,64 @@ def deliveroo_API():
         items = []
         for item in menu:
             menu_id = item['operational_name'][item['operational_name'].find("[")+1:item['operational_name'].find("]")]
-            try:
-                if database_flag == True:
-                    connect = pymssql.connect(server=server, user=user, password=sql_password, database=database,
-                                              login_timeout=5)
-                    cur = connect.cursor()
-                    sql = f'select MenuName from mn_Menu where MenuID={menu_id}'
-                    cur.execute(sql)
-                    sql_result = cur.fetchall()
-                    menu_name = sql_result[0][0].encode('latin-1').decode('gbk')
-                else:
-                    with open(f"{branch_id}.txt", "r+") as f:
-                        d = f.read()
-                        f.close()
-                    result = json.loads(d)
-                    menu_name = result.get(str(menu_id))
-            except:
-                print('sql connection failed...')
-                menu_id = "1999"
-                menu_name = "编码出错！Code Error!"
+            if menu_id.isdigit():
+                try:
+                    if database_flag == True:
+                        connect = pymssql.connect(server=server, user=user, password=sql_password, database=database,
+                                                  login_timeout=5,tds_version='7.0')
+                        cur = connect.cursor()
+                        sql = f'select MenuName from mn_Menu where MenuID={menu_id}'
+                        cur.execute(sql)
+                        sql_result = cur.fetchall()
+                        menu_name = sql_result[0][0].encode('latin-1').decode('gbk')
+                    else:
+                        with open(f"{branch_id}.txt", "r+") as f:
+                            d = f.read()
+                            f.close()
+                        result = json.loads(d)
+                        menu_name = result.get(str(menu_id))
+                except Exception as e:
+                    print(e)
+                    print('sql connection failed...')
+            else:
+                try:
+                    menu_id = int(menu_id) if menu_id.isdigit() else 1990  # 如果 menu_id 不是数字，则初始值为 1990
+                    # 定义包含汉字的字符串
+                    operational_name = item['operational_name']
 
+                    if len(operational_name)>30:
+
+                        # 使用正则表达式匹配汉字部分
+                        chinese_chars = re.findall(r'[\u4e00-\u9fa5]', operational_name)
+
+                        # 将匹配到的汉字列表转换为字符串
+                        chinese_chars_str = ''.join(chinese_chars)
+                        additional_string = "-G"
+                        result_str = chinese_chars_str + additional_string
+
+                        menu_name = result_str
+                    else:
+                        menu_name = operational_name
+
+                    if database_flag == True:
+                        connect = pymssql.connect(server=server, user=user, password=sql_password, database=database,
+                                                  login_timeout=5,tds_version='7.0')
+                        cur = connect.cursor()
+                        sql = 'UPDATE mn_Menu SET MenuName = %s WHERE MenuID = %s'
+                        cur.execute(sql, (menu_name, menu_id))
+
+                        # 更新操作执行成功，提交事务
+                        connect.commit()
+
+                        # 关闭游标和数据库连接
+                        cur.close()
+                        connect.close()
+                    menu_id = int(menu_id) + 1  # 将 menu_id 的值加一
+
+                except Exception as e:
+                    print(e)
+                    print('sql connection failed...')
+            menu_id = str(menu_id)
             i = {
                 "ParentID": "SP1010",  # 随便，但不能为空
                 "MenuID": menu_id,
@@ -253,6 +302,7 @@ def deliveroo_API():
                 "CookList": [],
                 "MenuList": []
             }
+
             if 'modifiers' in item.keys() and len(item['modifiers']) > 0:
                 CookList = []
                 for modifier in item['modifiers']:
@@ -278,6 +328,18 @@ def deliveroo_API():
 
     if float(price) == 0:
         price = 0.01
+    # prepare_time = datetime.fromisoformat(response['prepare_for']).strftime("%Y-%m-%d %H:%M:%S")
+    cut_notes = response['cutlery_notes']
+    if response['asap'] == False:
+        # prepare_time = datetime.strptime(response['prepare_for'], "%Y-%m-%dT%H:%M:%SZ").strftime("%Y-%m-%d %H:%M:%S")
+        prepare_time = "预派送时间：" +(datetime.strptime(response['prepare_for'], "%Y-%m-%dT%H:%M:%SZ") + timedelta(hours=1)).strftime("%H:%M:%S")
+        if cut_notes == "NO CUTLERY":
+            cut_notes = ""
+        else:
+            pass
+
+    else:
+        prepare_time = "00:00:00"
 
     d = {
         "AppID": "web",
@@ -287,7 +349,7 @@ def deliveroo_API():
         "TableID": "993",
         "TableName": "Deliveroo",
         "BillType": 3,  # 盲猜3代指会员支付
-        "Remark": response['order_notes'] + " " + response['cutlery_notes'],
+        "Remark": response['order_notes'] + " " +cut_notes+prepare_time,
         "ServiceRate": 0,
         "SumOfService": 0,
         "TotalAmt": price * commission,
@@ -302,6 +364,7 @@ def deliveroo_API():
     headers = {"Cookie": "user_app_id=web; user_web=167225002936801673; hash_web=5d95b5c7e70cdc9b799d918e52ee167b"}
     r = requests.post(url="http://tg2.weimember.cn/mb/member.api.ljson?api=mn.order&act=create", data=json.dumps(d),
                       headers=headers)
+    print(r.text)
     try:
         data2 = {"OrderID": json.loads(r.text)['data']['OrderID']}
     except Exception as e:

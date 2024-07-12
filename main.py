@@ -10,12 +10,13 @@ import tempfile
 from shutil import rmtree
 from tkinter import StringVar, OptionMenu
 from hungrypanda import hungrypandaScrape
+from panda_dr import panda_drAPI, initial_panda
 from deliveroo import deliverooScrape
 from deliveroo_api import deliveroo_API
 from fantuan import fantuanScrape
 from ubereats import uberScrape
 # from login import pandaLogin, deliverooLogin, fantuanLogin, uberLogin
-from checkLogin import checklogin
+from checkLogin import checklogin,checklogin_hun
 import requests
 import json
 import threading
@@ -191,11 +192,11 @@ def loop():
         try:
             if loophun:
                 # xxScrape()函数：搜一次xx平台的订单，只有登录信息失效了的时候会返回False
-                temp = hungrypandaScrape()
-                if temp == False:
-                    loophun = False
-                    login_hungry.config(text=" Log Now ", foreground="white", bg="#F36249")
-                    monitor_hungry.config(text="Stopped", foreground="#F36249")
+                # temp = initial_panda()
+                # if temp == False:
+                #     loophun = False
+                #     login_hungry.config(text=" Log Now ", foreground="white", bg="#F36249")
+                #     monitor_hungry.config(text="Stopped", foreground="#F36249")
                 # 如果在发送订单给金字招牌H5的时候错误了返回了报错信息，返回值temp会是H5的报错信息
                 try:
                     # 如果是库存数量不足，出一个置在最顶层的提示框
@@ -229,6 +230,7 @@ def loop():
                 if deliveroo_mode == "API":
                     temp = deliveroo_API()
                     time.sleep(40)
+                    print("--------------")
                 else:
                     temp = deliverooScrape()
                 if temp == False:
@@ -324,9 +326,13 @@ def loop():
 # 各个平台的开始暂停函数，会绑定在 start 和 stop 按钮上
 # 还有两个给start all 和 stop all
 def startloophungry():
-    global loophun, hun
+    global loophun, hun,loophun_thread
     loophun = hun
-    # threading.Thread(target=loophungry, daemon=True).start()
+    # looppdt()
+    loophun_thread=threading.Thread(target=looppdt, daemon=True)
+    loophun_thread.start()
+    time.sleep(5)
+    # loophun_thread.join()
     if loophun:
         monitor_hungry.config(text="Monitoring", foreground="#47A57D")
     else:
@@ -356,11 +362,20 @@ def stoploopdeliveroo():
 
 
 def startloopuber():
-    global loopub, ub, ublog
+    global loopub, ub, ublog,ubereats_button
+
     loopub = ub
-    threading.Thread(target=loopubt, daemon=True).start()
+    # while True:
+    if ubereats_button['state'] == 'normal':
+        threading.Thread(target=loopubt, daemon=True).start()
+    ubereats_button = tk.Button(wd, text=" Start ", command=startloopuber, font=fontStyle, fg='white', bg="#999999", state='disabled')
+    # thread1.start()
+        # thread1.join()
+        # time.sleep(30)
+        # print("-------------30-------------")
     if loopub:
         monitor_uber.config(text="Monitoring", foreground="#47A57D")
+
     else:
         pass
 
@@ -475,10 +490,23 @@ def set_login():
 
     if hun:
         # 除了设置文本，还设置了按钮绑定的函数
+
+        # checklogin_hun(hun)
+
         if h:
-            login_hungry.config(text=" Logged In ", foreground="white", bg="#47A57D", command=lambda: pandaLogin(login_hungry))
+            login_hungry.config(text=" Logged In ", foreground="white", bg="#47A57D", command=lambda: checklogin_hun(hun))
         else:
-            login_hungry.config(text=" Log Now ", foreground="white", bg="#F37249", command=lambda: pandaLogin(login_hungry), bd=1)
+            login_hungry.config(text=" Log Now ", foreground="white", bg="#F37249",command=lambda: handle_login_hun(hun))
+
+            def handle_login_hun(hun):
+                result = checklogin_hun(hun)
+                # 在这里处理返回的结果，可以根据需要进行其他操作
+                print(result)
+                if result:
+                    # print("success")
+                    login_hungry.config(text=" Logged In ", foreground="white", bg="#47A57D")
+                else:
+                    print("登录失败")
 
     if ub:
         if u:
@@ -548,11 +576,20 @@ if not fan:
     fantuan_stop_button = tk.Button(wd, text=" Stop ", command=startloopfantuan, font=fontStyle, fg='white', bg="#999999")
 
 
+#定义线程开始函数
+
 def loopubt():
 
-    while loopub:
-        app_instance = APP()
-        print("-------------30-------------")
+    # for i in range(700):
+    app_instance = APP()
+        # time.sleep(60)
+        # print("-------------60-------------")
+def looppdt():
+    print("looppdt thread started")
+    app_instance = panda_drAPI()
+
+
+
 
 # 设置循环频率
 def frequency_setting(root):
@@ -616,7 +653,7 @@ def open_browser():
 # advance settings 里的测试数据库连接
 def testSQL():
     try:
-        connect = pymssql.connect(server=server, user=user, password=sql_password, database=database)
+        connect = pymssql.connect(server=server, user=user, password=sql_password, database=database,tds_version='7.0',)
         tk.messagebox.showinfo(title='SQL connection Succeeded!',
                                message='SQL connection Succeeded!')
     except:

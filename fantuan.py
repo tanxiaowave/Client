@@ -38,14 +38,14 @@ def fantuanScrape():
         1492014128088262667286826329565602575995354986910798283007464819843657741)
     # 从文件读取key和饭团商户id
     try:
-        with open("fantuan_appkey.txt", "rb") as f:
-            username = f.readline()
-            f.close()
-        with open("fantuan_shopid.txt", "rb") as f:
-            password = f.readline()
-            f.close()
-        appkey = rsa.decrypt(username, pri).decode('utf-8')
-        shop_id = rsa.decrypt(password, pri).decode('utf-8')
+        # with open("fantuan_appkey.txt", "rb") as f:
+        #     username = f.readline()
+        #     f.close()
+        # with open("fantuan_shopid.txt", "rb") as f:
+        #     password = f.readline()
+        #     f.close()
+        appkey = '1b44a528-58de-4f07-b842-31cc492f0ede'
+        shop_id = 2277
     except:
         ftlogin = tk.Toplevel()
         ftlogin.resizable(False, False)
@@ -189,7 +189,7 @@ def fantuanScrape():
                 # 到数据库搜索id对应的菜名
                 if database_flag == True:
                     connect = pymssql.connect(server=server, user=user, password=sql_password, database=database,
-                                              login_timeout=5)
+                                              login_timeout=5,tds_version='7.0')
                     cur = connect.cursor()
                     sql = f'select MenuName from mn_Menu where MenuID={menu_id}'
                     cur.execute(sql)
@@ -285,9 +285,9 @@ def fantuanScrape():
         if json.loads(r.text)['err'].__contains__("库存数量不足"):
             return json.loads(r.text)['err']
         return
-    r2 = requests.post(url="http://tg2.weimember.cn/mb/member.api.ljson?api=mn.order&act=pay", json=data2,
-                       headers=headers)
-    logging.info(r2.text)
+    # r2 = requests.post(url="http://tg2.weimember.cn/mb/member.api.ljson?api=mn.order&act=pay", json=data2,
+    #                    headers=headers)
+    # logging.info(r2.text)
     print(f"Fantuan: Order {order_id} is sent to JZZP.")
     old_orders.insert(0, order_id)
     old_orders = old_orders[:20]
